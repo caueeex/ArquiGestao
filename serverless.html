@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serverless Architectures — ArquiGestão</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Arqui<span>Gestão</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html" data-pt="Início" data-en="Home">Início</a>
+        <a href="monolith-first.html">Monolith First</a>
+        <a href="legacy-displacement.html">Legacy</a>
+        <a href="serverless.html" aria-current="page">Serverless</a>
+        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="axis-tag" data-pt="Eixo 3 · Camadas e execução" data-en="Axis 3 · Layers & execution">Eixo 3 · Camadas e execução</div>
+        <h1>Serverless Architectures</h1>
+        <p class="lead" data-show="pt">
+          Segundo Mike Roberts, serverless combina BaaS (backend como serviço de terceiros) e/ou FaaS (funções efêmeras, disparadas por evento, gerenciadas pelo provedor). A equipe deixa de operar servidores “sempre ligados” — e passa a negociar custo variável, dependência de vendor e limites de execução, cold start e observabilidade.
+        </p>
+        <p class="lead" data-show="en">
+          According to Mike Roberts, serverless combines BaaS (third-party backend services) and/or FaaS (ephemeral, event-triggered functions managed by a provider). The team stops running always-on servers — and instead negotiates variable cost, vendor dependency, and limits around execution, cold starts, and observability.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap content-grid">
+      <div class="side-stack">
+        <article class="panel">
+          <h2 data-pt="Ideia central (nas nossas palavras)" data-en="Core idea (in our words)">Ideia central (nas nossas palavras)</h2>
+          <div data-show="pt">
+            <p>“Serverless” não significa ausência de servidores: significa que a organização não gerencia a capacidade nem o processo de servidor. Em BaaS, autenticação, banco e outros pedaços vêm prontos; em FaaS, o código da equipe sobe como funções sob demanda.</p>
+            <p>O ganho típico é menos custo operacional fixo, escala automática e menor lead time para experimentar. O preço é lock-in, multitenancy, limites de duração/estado e um ecossistema de teste/debug que ainda exige maturidade da equipe.</p>
+          </div>
+          <div data-show="en">
+            <p>“Serverless” does not mean no servers: it means the organization does not manage server capacity or server processes. With BaaS, auth, databases and other pieces come ready-made; with FaaS, team code runs as on-demand functions.</p>
+            <p>Typical gains are lower fixed ops cost, automatic scaling and shorter lead time to experiment. The price is lock-in, multitenancy, duration/state limits and a testing/debugging ecosystem that still demands team maturity.</p>
+          </div>
+        </article>
+
+        <div class="split">
+          <article class="panel pros">
+            <h2 data-pt="Vantagens" data-en="Advantages">Vantagens</h2>
+            <ul data-show="pt">
+              <li>Custo operacional reduzido (paga por uso; bom para tráfego irregular).</li>
+              <li>BaaS corta tempo de desenvolvimento de capacidades comuns.</li>
+              <li>FaaS escala horizontalmente sem a equipe gerenciar VMs.</li>
+              <li>Empacota e publica unidades menores — favorece experimentação contínua.</li>
+            </ul>
+            <ul data-show="en">
+              <li>Lower operational cost (pay-per-use; good for uneven traffic).</li>
+              <li>BaaS cuts development time for common capabilities.</li>
+              <li>FaaS scales horizontally without the team managing VMs.</li>
+              <li>Packages and ships smaller units — favors continuous experimentation.</li>
+            </ul>
+          </article>
+          <article class="panel cons">
+            <h2 data-pt="Desvantagens" data-en="Disadvantages">Desvantagens</h2>
+            <ul data-show="pt">
+              <li>Controle e lock-in do provedor; migração pode ser cara.</li>
+              <li>Cold starts, limites de duração e ausência de estado “na máquina”.</li>
+              <li>Teste, debug e observabilidade mais desafiadores.</li>
+              <li>Não é “NoOps”: operações mudam de forma, não desaparecem.</li>
+            </ul>
+            <ul data-show="en">
+              <li>Vendor control and lock-in; migration can be expensive.</li>
+              <li>Cold starts, duration limits and no in-server state.</li>
+              <li>Testing, debugging and observability are harder.</li>
+              <li>Not “NoOps”: operations change shape, they do not vanish.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <aside class="side-stack">
+        <article class="panel">
+          <h2 data-pt="Impacto na gestão do projeto" data-en="Impact on project management">Impacto na gestão do projeto</h2>
+          <div class="impact-grid">
+            <div class="impact-item">
+              <strong data-pt="Prazo" data-en="Schedule">Prazo</strong>
+              <span data-show="pt">Pode encurtar time-to-market de MVPs e integrações event-driven; surpresas de cold start/limites podem atrasar hardening de produção.</span>
+              <span data-show="en">Can shorten time-to-market for MVPs and event-driven integrations; cold-start/limit surprises can delay production hardening.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Custo" data-en="Cost">Custo</strong>
+              <span data-show="pt">Troca CAPEX/opex fixo por custo variável; exige monitoring financeiro (finops). Spikes de tráfego ou funções mal dimensionadas mudam a conta rápido.</span>
+              <span data-show="en">Swaps fixed CAPEX/opex for variable cost; needs financial monitoring (finops). Traffic spikes or poorly sized functions can move the bill quickly.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Equipe" data-en="Team">Equipe</strong>
+              <span data-show="pt">Menos papéis clássicos de sysadmin; mais necessidade de skills cloud, segurança de APIs e desenho de eventos. Parte da lógica pode migrar para o client.</span>
+              <span data-show="en">Fewer classic sysadmin roles; more need for cloud skills, API security and event design. Some logic may move to the client.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Riscos" data-en="Risks">Riscos</strong>
+              <span data-show="pt">Riscos de vendor, compliance e falhas multi-tenant; mitiga risco de overprovisioning. O projeto deve planejar testes e runbooks desde o início.</span>
+              <span data-show="en">Vendor, compliance and multi-tenant failure risks; mitigates overprovisioning risk. The project should plan tests and runbooks from the start.</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="source-box">
+          <h2 data-pt="Post original" data-en="Original post">Post original</h2>
+          <p data-pt="Mike Roberts — Serverless Architectures (2018)." data-en="Mike Roberts — Serverless Architectures (2018).">Mike Roberts — Serverless Architectures (2018).</p>
+          <a href="https://martinfowler.com/articles/serverless.html" target="_blank" rel="noopener">martinfowler.com/articles/serverless.html</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a href="index.html" data-pt="← Voltar ao início" data-en="← Back to home">← Voltar ao início</a>
+      <span>ArquiGestão</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

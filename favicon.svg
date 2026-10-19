@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="ArquiGestão">
+  <rect width="32" height="32" rx="6" fill="#0f2433"/>
+  <!-- blueprint grid -->
+  <g stroke="#2a4456" stroke-width="0.5" opacity="0.9">
+    <path d="M8 0v32M16 0v32M24 0v32M0 8h32M0 16h32M0 24h32"/>
+  </g>
+  <!-- three architecture layers -->
+  <rect x="6" y="7" width="20" height="5" rx="1.2" fill="#0d8a7c"/>
+  <rect x="8" y="14" width="16" height="5" rx="1.2" fill="#7de0d4"/>
+  <rect x="10" y="21" width="12" height="5" rx="1.2" fill="#c45c3e"/>
+</svg>

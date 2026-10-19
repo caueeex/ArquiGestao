@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ArquiGestão — Guia de Arquitetura e Gestão de Projetos</title>
+  <meta name="description" content="Três conceitos de arquitetura de software e seu impacto na gestão de projetos." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Arqui<span>Gestão</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#posts" data-pt="Conceitos" data-en="Concepts">Conceitos</a>
+        <a href="#equipe" data-pt="Equipe" data-en="Team">Equipe</a>
+        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow" data-pt="SENAI EAD · Gestão de Projetos" data-en="SENAI EAD · Project Management">SENAI EAD · Gestão de Projetos</p>
+          <h1 data-pt="ArquiGestão" data-en="ArquiGestão">ArquiGestão</h1>
+          <p class="hero-lead" data-pt="Três decisões de arquitetura explicadas em linguagem de projeto: prazo, custo, equipe e risco." data-en="Three architecture decisions explained in project language: schedule, cost, team and risk.">
+            Três decisões de arquitetura explicadas em linguagem de projeto: prazo, custo, equipe e risco.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#posts" data-pt="Ver os 3 conceitos" data-en="See the 3 concepts">Ver os 3 conceitos</a>
+            <a class="btn btn-ghost" href="#equipe" data-pt="Conhecer a equipe" data-en="Meet the team">Conhecer a equipe</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="blueprint">
+            <div class="blueprint-label">Architecture × Delivery</div>
+          </div>
+          <div class="floating-axis">
+            <strong data-pt="1 post por eixo" data-en="1 post per axis">1 post por eixo</strong>
+            <span data-pt="Microsserviços · Fronteiras · Camadas" data-en="Microservices · Boundaries · Layers">Microsserviços · Fronteiras · Camadas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="posts">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-pt="Os três conceitos" data-en="The three concepts">Os três conceitos</h2>
+          <p data-pt="Cada página resume a ideia central do post de Martin Fowler / Thoughtworks, destaca vantagens e desvantagens e conecta o conceito à gestão do projeto." data-en="Each page summarizes the core idea from Martin Fowler / Thoughtworks, covers trade-offs, and connects the concept to project management.">
+            Cada página resume a ideia central do post de Martin Fowler / Thoughtworks, destaca vantagens e desvantagens e conecta o conceito à gestão do projeto.
+          </p>
+        </div>
+
+        <div class="post-links">
+          <a class="post-link" href="monolith-first.html">
+            <div>
+              <div class="axis" data-pt="Eixo 1 · Microsserviços" data-en="Axis 1 · Microservices">Eixo 1 · Microsserviços</div>
+              <h3>Monolith First</h3>
+              <p data-pt="Começar com um monólito bem estruturado e só decompor quando as fronteiras estiverem claras." data-en="Start with a well-structured monolith and split only when service boundaries are clear.">
+                Começar com um monólito bem estruturado e só decompor quando as fronteiras estiverem claras.
+              </p>
+            </div>
+            <span class="go" data-pt="Abrir página →" data-en="Open page →">Abrir página →</span>
+          </a>
+
+          <a class="post-link" href="legacy-displacement.html">
+            <div>
+              <div class="axis" data-pt="Eixo 2 · Fronteiras e evolução" data-en="Axis 2 · Boundaries & evolution">Eixo 2 · Fronteiras e evolução</div>
+              <h3>Legacy Displacement</h3>
+              <p data-pt="Substituir sistemas legados em partes, com entrega incremental e mudança organizacional." data-en="Replace legacy systems in parts, with incremental delivery and organizational change.">
+                Substituir sistemas legados em partes, com entrega incremental e mudança organizacional.
+              </p>
+            </div>
+            <span class="go" data-pt="Abrir página →" data-en="Open page →">Abrir página →</span>
+          </a>
+
+          <a class="post-link" href="serverless.html">
+            <div>
+              <div class="axis" data-pt="Eixo 3 · Camadas e execução" data-en="Axis 3 · Layers & execution">Eixo 3 · Camadas e execução</div>
+              <h3>Serverless</h3>
+              <p data-pt="BaaS e FaaS reduzem operação contínua — com trade-offs de vendor lock-in e observabilidade." data-en="BaaS and FaaS reduce always-on ops — with trade-offs around vendor lock-in and observability.">
+                BaaS e FaaS reduzem operação contínua — com trade-offs de vendor lock-in e observabilidade.
+              </p>
+            </div>
+            <span class="go" data-pt="Abrir página →" data-en="Open page →">Abrir página →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-pt="Equipe" data-en="Team">Equipe</h2>
+          <p data-pt="Integrantes do trabalho (UC Gestão de Projetos — Prof. Wesley Fioreze)." data-en="Team members (Project Management course — Prof. Wesley Fioreze).">
+            Integrantes do trabalho (UC Gestão de Projetos — Prof. Wesley Fioreze).
+          </p>
+        </div>
+        <ul class="team-list">
+          <li>Cauê Sotero Moreira de Souza</li>
+          <li>Lucas Salgado Moreira</li>
+          <li>Jarede de Santi</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span data-pt="Atividade: Guia Web de Arquitetura de Software" data-en="Assignment: Software Architecture Web Guide">Atividade: Guia Web de Arquitetura de Software</span>
+      <span>Fontes: martinfowler.com</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

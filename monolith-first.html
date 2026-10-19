@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monolith First — ArquiGestão</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Arqui<span>Gestão</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html" data-pt="Início" data-en="Home">Início</a>
+        <a href="monolith-first.html" aria-current="page">Monolith First</a>
+        <a href="legacy-displacement.html">Legacy</a>
+        <a href="serverless.html">Serverless</a>
+        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="axis-tag" data-pt="Eixo 1 · Microsserviços" data-en="Axis 1 · Microservices">Eixo 1 · Microsserviços</div>
+        <h1>Monolith First</h1>
+        <p class="lead" data-show="pt">
+          A ideia de Martin Fowler é direta: a maioria das histórias de sucesso com microsserviços começou como monólito; muitas tentativas de nascer já “em pedaços” terminaram em apuros. Para a gestão de projetos, isso significa priorizar velocidade de aprendizado no início e só pagar o “prêmio” dos microsserviços quando o produto e as fronteiras de negócio estiverem mais claros.
+        </p>
+        <p class="lead" data-show="en">
+          Martin Fowler’s point is straightforward: most successful microservice stories started as a monolith; many systems built as microservices from day one ran into serious trouble. For project management, that means prioritizing learning speed early and only paying the microservice “premium” once the product and business boundaries are clearer.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap content-grid">
+      <div class="side-stack">
+        <article class="panel">
+          <h2 data-pt="Ideia central (nas nossas palavras)" data-en="Core idea (in our words)">Ideia central (nas nossas palavras)</h2>
+          <div data-show="pt">
+            <p>Microsserviços têm custo operacional e organizacional alto (deploy, monitoramento, coordenação entre equipes). No começo do produto, esse custo atrasa o feedback do mercado.</p>
+            <p>Além disso, fronteiras ruins entre serviços são caras de corrigir. Um monólito modular permite descobrir Bounded Contexts na prática e, depois, extrair serviços com mais segurança — ou até usar o monólito como arquitetura “sacrificial” para chegar rápido ao mercado.</p>
+          </div>
+          <div data-show="en">
+            <p>Microservices carry a high operational and organizational cost (deploy, monitoring, cross-team coordination). Early in a product, that cost slows market feedback.</p>
+            <p>Bad service boundaries are also expensive to fix. A modular monolith lets you discover Bounded Contexts in practice and later extract services more safely — or even treat the monolith as a sacrificial architecture to reach the market quickly.</p>
+          </div>
+        </article>
+
+        <div class="split">
+          <article class="panel pros">
+            <h2 data-pt="Vantagens" data-en="Advantages">Vantagens</h2>
+            <ul data-show="pt">
+              <li>Ciclo de feedback mais curto no início (menos infraestrutura distribuída).</li>
+              <li>Refatoração de módulos dentro de um único deploy é mais simples.</li>
+              <li>Dá tempo para amadurecer pré-requisitos de microsserviços (CI/CD, monitoramento, provisionamento).</li>
+              <li>Reduz o risco de “cortar o bolo” nas linhas erradas cedo demais.</li>
+            </ul>
+            <ul data-show="en">
+              <li>Shorter feedback loops early on (less distributed infrastructure).</li>
+              <li>Refactoring modules inside a single deploy is simpler.</li>
+              <li>Buys time to mature microservice prerequisites (CI/CD, monitoring, provisioning).</li>
+              <li>Lowers the risk of cutting service boundaries in the wrong places too early.</li>
+            </ul>
+          </article>
+          <article class="panel cons">
+            <h2 data-pt="Desvantagens" data-en="Disadvantages">Desvantagens</h2>
+            <ul data-show="pt">
+              <li>Monólito mal modularizado vira difícil de fatiar depois.</li>
+              <li>Equipes grandes podem sofrer com contenção no mesmo código-base.</li>
+              <li>Escalar só um pedaço do sistema é menos granular.</li>
+              <li>Se a organização já domina microsserviços e o domínio é conhecido, começar monolítico pode parecer “perda de ritmo”.</li>
+            </ul>
+            <ul data-show="en">
+              <li>A poorly modularized monolith becomes hard to slice later.</li>
+              <li>Large teams may contend on the same codebase.</li>
+              <li>Scaling only one part of the system is less granular.</li>
+              <li>If the org already masters microservices and the domain is known, starting monolithic may feel like lost momentum.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <aside class="side-stack">
+        <article class="panel">
+          <h2 data-pt="Impacto na gestão do projeto" data-en="Impact on project management">Impacto na gestão do projeto</h2>
+          <div class="impact-grid">
+            <div class="impact-item">
+              <strong data-pt="Prazo" data-en="Schedule">Prazo</strong>
+              <span data-show="pt">Acelera a primeira entrega útil; a migração para serviços entra no roadmap só quando o domínio estabiliza.</span>
+              <span data-show="en">Speeds up the first useful release; migration to services enters the roadmap only when the domain stabilizes.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Custo" data-en="Cost">Custo</strong>
+              <span data-show="pt">Evita o “Microservice Premium” cedo (plataforma, observabilidade, coordenação). O investimento em split acontece com mais evidência de valor.</span>
+              <span data-show="en">Avoids the early “Microservice Premium” (platform, observability, coordination). Split investment happens with clearer evidence of value.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Equipe" data-en="Team">Equipe</strong>
+              <span data-show="pt">Começa com time mais coeso e menos overhead de contratos entre serviços; depois permite formar squads por capacidade de negócio.</span>
+              <span data-show="en">Starts with a more cohesive team and less inter-service contract overhead; later enables squads by business capability.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Riscos" data-en="Risks">Riscos</strong>
+              <span data-show="pt">Reduz risco técnico de fronteiras erradas e risco de negócio de atraso no go-to-market; aumenta o risco de “big ball of mud” se a modularidade for negligenciada.</span>
+              <span data-show="en">Reduces technical risk of wrong boundaries and business risk of late go-to-market; increases “big ball of mud” risk if modularity is neglected.</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="source-box">
+          <h2 data-pt="Post original" data-en="Original post">Post original</h2>
+          <p data-pt="Martin Fowler — Monolith First (2015)." data-en="Martin Fowler — Monolith First (2015).">Martin Fowler — Monolith First (2015).</p>
+          <a href="https://martinfowler.com/bliki/MonolithFirst.html" target="_blank" rel="noopener">martinfowler.com/bliki/MonolithFirst.html</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a href="index.html" data-pt="← Voltar ao início" data-en="← Back to home">← Voltar ao início</a>
+      <span>ArquiGestão</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

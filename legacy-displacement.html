@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patterns of Legacy Displacement — ArquiGestão</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Arqui<span>Gestão</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html" data-pt="Início" data-en="Home">Início</a>
+        <a href="monolith-first.html">Monolith First</a>
+        <a href="legacy-displacement.html" aria-current="page">Legacy</a>
+        <a href="serverless.html">Serverless</a>
+        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="axis-tag" data-pt="Eixo 2 · Fronteiras e evolução" data-en="Axis 2 · Boundaries & evolution">Eixo 2 · Fronteiras e evolução</div>
+        <h1>Patterns of Legacy Displacement</h1>
+        <p class="lead" data-show="pt">
+          O artigo descreve como organizações ficam presas numa “esteira” de programas de modernização incompletos. A saída não é um big bang tecnológico: é combinar resultados de negócio claros, substituição em fatias, entrega incremental e mudança de cultura — porque legado é pelo menos metade processo e estrutura, não só código antigo.
+        </p>
+        <p class="lead" data-show="en">
+          The article describes how organizations get stuck on a treadmill of half-finished modernization programs. The way out is not a technology big bang: it is combining clear business outcomes, displacement in slices, incremental delivery, and cultural change — because legacy is at least half process and structure, not only old code.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap content-grid">
+      <div class="side-stack">
+        <article class="panel">
+          <h2 data-pt="Ideia central (nas nossas palavras)" data-en="Core idea (in our words)">Ideia central (nas nossas palavras)</h2>
+          <div data-show="pt">
+            <p>Programas longos (3–5 anos) com escopo fechado no início e “feature parity” com o legado costumam falhar: o negócio muda, o gap cresce e o sistema antigo nunca é desligado.</p>
+            <p>O padrão saudável segue quatro movimentos: (1) alinhar os outcomes (reduzir custo de mudança, melhorar processo, aposentar o sistema, responder a disrupção etc.); (2) partir o problema em costuras menores; (3) entregar cada parte com segurança (padrões como Divert the Flow, Event Interception, Transitional Architecture); (4) mudar a organização para modernizar de forma contínua, não só em “projetões”.</p>
+          </div>
+          <div data-show="en">
+            <p>Long programs (3–5 years) with upfront frozen scope and “feature parity” with the legacy often fail: the business changes, the gap grows, and the old system is never turned off.</p>
+            <p>A healthier pattern follows four moves: (1) align outcomes (lower cost of change, improve process, retire the system, respond to disruption, etc.); (2) break the problem along smaller seams; (3) deliver each part safely (patterns such as Divert the Flow, Event Interception, Transitional Architecture); (4) change the organization so modernization becomes continuous, not only giant programs.</p>
+          </div>
+        </article>
+
+        <div class="split">
+          <article class="panel pros">
+            <h2 data-pt="Vantagens" data-en="Advantages">Vantagens</h2>
+            <ul data-show="pt">
+              <li>Valor chega cedo, em fatias, sem esperar o “corte final”.</li>
+              <li>Permite continuar o BAU enquanto se moderniza.</li>
+              <li>Reduz desperdício de programas abandonados no meio.</li>
+              <li>Força alinhamento explícito de outcomes entre negócio e TI.</li>
+            </ul>
+            <ul data-show="en">
+              <li>Value arrives early, in slices, without waiting for a final cutover.</li>
+              <li>Lets BAU continue while modernization proceeds.</li>
+              <li>Reduces waste from mid-program abandoned replacements.</li>
+              <li>Forces explicit outcome alignment between business and IT.</li>
+            </ul>
+          </article>
+          <article class="panel cons">
+            <h2 data-pt="Desvantagens" data-en="Disadvantages">Desvantagens</h2>
+            <ul data-show="pt">
+              <li>Exige disciplina de arquitetura transitória (mais de um caminho convivendo).</li>
+              <li>Governança e contratos tradicionais de fornecedor podem travar o ritmo incremental.</li>
+              <li>Sem mudança cultural, os padrões técnicos sozinhos não quebram a esteira.</li>
+              <li>Feature parity como meta única infla escopo e prazo.</li>
+            </ul>
+            <ul data-show="en">
+              <li>Requires transitional architecture discipline (more than one path coexisting).</li>
+              <li>Traditional vendor governance/contracts can block incremental pace.</li>
+              <li>Without cultural change, technical patterns alone will not break the treadmill.</li>
+              <li>Feature parity as the only goal inflates scope and schedule.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <aside class="side-stack">
+        <article class="panel">
+          <h2 data-pt="Impacto na gestão do projeto" data-en="Impact on project management">Impacto na gestão do projeto</h2>
+          <div class="impact-grid">
+            <div class="impact-item">
+              <strong data-pt="Prazo" data-en="Schedule">Prazo</strong>
+              <span data-show="pt">Troca marcos de “go-live único” por ondas de entrega; o cronograma acompanha outcomes, não um cut-over monolítico.</span>
+              <span data-show="en">Replaces single go-live milestones with delivery waves; the schedule tracks outcomes, not one monolithic cutover.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Custo" data-en="Cost">Custo</strong>
+              <span data-show="pt">Evita afundar anos de orçamento antes de validar valor; pode manter custo de coexistência (legado + novo) por um período planejado.</span>
+              <span data-show="en">Avoids sinking years of budget before proving value; may keep coexistence cost (legacy + new) for a planned period.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Equipe" data-en="Team">Equipe</strong>
+              <span data-show="pt">Exige colaboração entre times de modernização e BAU; liderança e estrutura importam tanto quanto a stack nova.</span>
+              <span data-show="en">Requires collaboration between modernization and BAU teams; leadership and structure matter as much as the new stack.</span>
+            </div>
+            <div class="impact-item">
+              <strong data-pt="Riscos" data-en="Risks">Riscos</strong>
+              <span data-show="pt">Diminui risco de big bang e de abandono total; aumenta risco de complexidade temporária se as “costuras” não forem bem escolhidas.</span>
+              <span data-show="en">Lowers big-bang and total-abandonment risk; raises temporary-complexity risk if seams are poorly chosen.</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="source-box">
+          <h2 data-pt="Post original" data-en="Original post">Post original</h2>
+          <p data-pt="Ian Cartwright, Rob Horn, James Lewis — Patterns of Legacy Displacement (2024)." data-en="Ian Cartwright, Rob Horn, James Lewis — Patterns of Legacy Displacement (2024).">Ian Cartwright, Rob Horn, James Lewis — Patterns of Legacy Displacement (2024).</p>
+          <a href="https://martinfowler.com/articles/patterns-legacy-displacement/" target="_blank" rel="noopener">martinfowler.com/articles/patterns-legacy-displacement/</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a href="index.html" data-pt="← Voltar ao início" data-en="← Back to home">← Voltar ao início</a>
+      <span>ArquiGestão</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
